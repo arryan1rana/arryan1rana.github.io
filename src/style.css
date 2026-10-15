@@ -69,7 +69,7 @@ button, input, textarea, select { font: inherit; }
 .hero > div:first-child { min-width: 0; }
 .eyebrow, .label {
   color: var(--yellow);
-  font: 500 10px var(--mono);
+  font: 600 10px var(--mono);
   letter-spacing: .12em;
   text-transform: uppercase;
 }
@@ -320,8 +320,8 @@ h1 {
 @keyframes tape-flow { to { background-position: 152px 0; } }
 @keyframes tape-edge-flow { to { background-position: 32px 0; } }
 @keyframes tape-sway {
-  0%, 100% { transform: rotate(-1deg) translateY(0); }
-  50% { transform: rotate(-.65deg) translateY(-1px); }
+  0%, 100% { transform: rotate(-3.2deg) translateY(0); }
+  50% { transform: rotate(-2.8deg) translateY(-1px); }
 }
 @keyframes mark-line {
   0%, 100% { width: 42px; opacity: .75; }
@@ -385,8 +385,8 @@ h1 {
   animation: tape-flow 16s linear infinite, tape-sway-reverse 8s ease-in-out infinite;
 }
 @keyframes tape-sway-reverse {
-  0%, 100% { transform: rotate(1deg) translateY(0); }
-  50% { transform: rotate(.65deg) translateY(-1px); }
+  0%, 100% { transform: rotate(3.2deg) translateY(0); }
+  50% { transform: rotate(2.8deg) translateY(-1px); }
 }
 .work-copy {
   position: absolute;
