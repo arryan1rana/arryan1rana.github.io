@@ -320,8 +320,8 @@ h1 {
 @keyframes tape-flow { to { background-position: 152px 0; } }
 @keyframes tape-edge-flow { to { background-position: 32px 0; } }
 @keyframes tape-sway {
-  0%, 100% { transform: rotate(-2.5deg) translateY(0); }
-  50% { transform: rotate(-2deg) translateY(-2px); }
+  0%, 100% { transform: rotate(-2.3deg) translateY(0); }
+  50% { transform: rotate(-1.9deg) translateY(-2px); }
 }
 @keyframes mark-line {
   0%, 100% { width: 42px; opacity: .75; }
@@ -354,6 +354,59 @@ h1 {
 }
 .tape::before { top: 0; }
 .tape::after { bottom: 0; }
+
+.work-zone {
+  isolation: isolate;
+  height: clamp(360px, 40vw, 500px);
+  min-height: 360px;
+  padding: 0;
+  border-color: #303633;
+  background: #18211f;
+}
+.work-image {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 48%;
+}
+.work-shade {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(180deg, #10131120 10%, #10131108 46%, #101311a8 100%);
+  pointer-events: none;
+}
+.tape { top: 50%; z-index: 3; }
+.tape-secondary {
+  z-index: 2;
+  animation: tape-flow 16s linear infinite, tape-sway-reverse 8s ease-in-out infinite;
+}
+@keyframes tape-sway-reverse {
+  0%, 100% { transform: rotate(2.3deg) translateY(0); }
+  50% { transform: rotate(1.9deg) translateY(-2px); }
+}
+.work-copy {
+  position: absolute;
+  z-index: 4;
+  right: 22px;
+  bottom: 20px;
+  left: 22px;
+  padding: 16px 18px;
+  border: 1px solid #ffffff45;
+  border-radius: 3px;
+  background: #151a17c9;
+  color: #fff;
+  backdrop-filter: blur(8px);
+}
+.work-copy p { color: #e0e4df; }
+.work-copy .label { color: var(--tape); }
+@media (max-width: 510px) {
+  .work-zone { height: 330px; min-height: 300px; padding: 0; }
+  .work-copy { right: 12px; bottom: 12px; left: 12px; padding: 12px 13px; gap: 8px; }
+}
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation: none !important; }
