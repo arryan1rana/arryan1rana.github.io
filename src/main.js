@@ -2,6 +2,7 @@ import { createClient } from '@supabase/supabase-js';
 import { site } from './config.js';
 import './style.css';
 import upcomingProjectImage from '../images/actualreality-upcoming.png';
+import profileImage from '../images/arryan-rana-profile.png';
 import './light-theme.css';
 
 const env = import.meta.env;
@@ -16,7 +17,7 @@ function card(p){const url=cleanUrl(p.url);return `<article class="card"><div cl
 async function home(){
  let projects=[]; let issue='';
  if(configured){const {data,error}=await supabase.from('projects').select('id,title,description,category,tags,url,year').eq('status','completed').order('sort_order',{ascending:true}).order('created_at',{ascending:false}); if(error) issue='Projects are temporarily unavailable.'; else projects=data||[];}
- app.innerHTML=shell(`<main><section class="hero" id="about"><div><div class="eyebrow">${esc(site.role)}${site.location?` · ${esc(site.location)}`:''}</div><h1>${esc(site.name)}<br>Thoughtful code. Built to work.</h1><p class="intro">${esc(site.intro)}</p></div><aside class="hero-mark"><div class="mark-symbol">{ }</div><small>Code / craft / iterate<br>Personal project log</small></aside></section><section class="projects shell" id="projects" style="padding-left:0;padding-right:0"><div class="section-head"><div><div class="eyebrow">Selected work</div><h2>Completed projects</h2></div><span class="count">${configured?String(projects.length).padStart(2,'0'):'—'} / PUBLIC</span></div><div class="grid">${issue?`<div class="empty">${issue}</div>`:projects.length?projects.map(card).join(''):`<div class="empty">Completed projects will appear here as they’re ready to share.</div>`}</div></section><section class="work-zone" aria-label="Upcoming project"><img class="work-image" src="${upcomingProjectImage}" alt="A cyan ActualReality project interface in a warm, modern studio." loading="lazy" decoding="async"><div class="work-shade" aria-hidden="true"></div><div class="tape tape-primary">Work in progress · details kept under wraps</div><div class="work-copy"><div><strong>Currently on the bench</strong><p>New work is underway. I’ll share it when it’s ready.</p></div><span class="label">Private until complete</span></div></section></main>`);
+ app.innerHTML=shell(`<main><section class="hero" id="about"><div><div class="eyebrow">${esc(site.role)}${site.location?` · ${esc(site.location)}`:''}</div><h1>${esc(site.name)}<br>Thoughtful code. Built to work.</h1><p class="intro">${esc(site.intro)}</p></div><figure class="hero-portrait"><img class="profile-image" src="${profileImage}" alt="Portrait of Arryan Rana" fetchpriority="high" decoding="async"><figcaption class="profile-caption"><span>Arryan Rana</span><strong>Student Developer</strong></figcaption></figure></section><section class="projects shell" id="projects" style="padding-left:0;padding-right:0"><div class="section-head"><div><div class="eyebrow">Selected work</div><h2>Completed projects</h2></div><span class="count">${configured?String(projects.length).padStart(2,'0'):'—'} / PUBLIC</span></div><div class="grid">${issue?`<div class="empty">${issue}</div>`:projects.length?projects.map(card).join(''):`<div class="empty">Completed projects will appear here as they’re ready to share.</div>`}</div></section><section class="work-zone" aria-label="Upcoming project"><img class="work-image" src="${upcomingProjectImage}" alt="A cyan ActualReality project interface in a warm, modern studio." loading="lazy" decoding="async"><div class="work-shade" aria-hidden="true"></div><div class="tape tape-primary">Work in progress · details kept under wraps</div><div class="work-copy"><div><strong>Currently on the bench</strong><p>New work is underway. I’ll share it when it’s ready.</p></div><span class="label">Private until complete</span></div></section></main>`);
 }
 const statusMsg=(s,err=false)=>{const n=document.querySelector('#notice'); if(n){n.textContent=s;n.classList.toggle('error',err)}};
 async function admin(){
@@ -32,5 +33,17 @@ async function admin(){
  cancel.onclick=()=>{form.reset();form.elements.id.value='';form.elements.sort_order.value='0';document.querySelector('#form-title').textContent='Add a project';cancel.classList.add('hidden')};
  document.querySelectorAll('[data-delete]').forEach(b=>b.onclick=async()=>{if(!confirm('Delete this project permanently?'))return;const {error}=await supabase.from('projects').delete().eq('id',b.dataset.delete);if(error)statusMsg('Delete failed.',true);else admin()});
 }
-async function render(){path()==='admin'?await admin():await home()}
+function updatePortraitFade(){
+ const portrait=document.querySelector('.hero-portrait');if(!portrait)return;
+ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){portrait.style.setProperty('--portrait-opacity','1');portrait.style.setProperty('--portrait-shift','0px');return;}
+ const top=portrait.getBoundingClientRect().top+window.scrollY;
+ const start=Math.max(0,top-window.innerHeight*.12);
+ const end=Math.max(start+1,top+portrait.offsetHeight*.65);
+ const progress=Math.min(1,Math.max(0,(window.scrollY-start)/(end-start)));
+ portrait.style.setProperty('--portrait-opacity',(1-progress).toFixed(3));
+ portrait.style.setProperty("--portrait-shift",(-18*progress)+"px");
+}
+window.addEventListener('scroll',updatePortraitFade,{passive:true});
+window.addEventListener('resize',updatePortraitFade);
+async function render(){path()==='admin'?await admin():await home();updatePortraitFade()}
 window.addEventListener('hashchange',render);render();
