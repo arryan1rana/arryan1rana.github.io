@@ -1,12 +1,13 @@
+Warning: fs2 was declared with const; use let for reassignable variables.
 :root {
   color-scheme: light;
   font-family: "DM Sans", "Segoe UI", system-ui, sans-serif;
   color: #20211e;
-  background: #ffffff;
+  background: #f3f2ee;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   --ink: #20211e;
-  --paper: #ffffff;
+  --paper: #f3f2ee;
   --muted: #666963;
   --yellow: #8b6707;
   --tape: #f3cf43;
