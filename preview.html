@@ -4,38 +4,52 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Arryan Rana — Student Developer portfolio.">
   <title>Arryan Rana — Portfolio Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    :root{color-scheme:dark;--ink:#171816;--paper:#f1efe7;--muted:#a8a69e;--yellow:#f5c928;--line:#343530;--panel:#20211e}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--paper);font:16px/1.55 "Segoe UI",Arial,sans-serif}
-    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 44px));margin:auto}.top{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
-    .brand{font-weight:800;letter-spacing:-.04em;font-size:19px}.brand b{color:var(--yellow)}nav{display:flex;gap:28px;font-size:13px;color:#d2d0c8}nav a:hover,.footer a:hover{color:var(--yellow)}
-    .hero{padding:100px 0 88px;display:grid;grid-template-columns:1fr 190px;gap:50px;align-items:center}.eyebrow,.kicker{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--yellow);font-weight:700}
-    h1{font-size:clamp(44px,8vw,86px);line-height:.98;letter-spacing:-.065em;margin:22px 0}.headline{font-size:clamp(15px,2vw,19px);letter-spacing:.01em;color:#cfcdc4}.intro{max-width:600px;color:var(--muted);font-size:17px;margin-top:22px}
-    .mark{border:1px solid #4a4a42;aspect-ratio:1;display:grid;place-items:center;position:relative;background:linear-gradient(135deg,transparent 49.5%,#34352f 50%,transparent 50.5%)}.mark:before,.mark:after{content:"";position:absolute;background:var(--yellow)}.mark:before{width:10px;height:78px;transform:rotate(45deg)}.mark:after{height:10px;width:78px;transform:rotate(45deg)}.mark span{position:absolute;bottom:12px;right:12px;font:11px Consolas,monospace;color:#aaa}
-    .section{padding:36px 0 74px}.section-head{display:flex;justify-content:space-between;align-items:end;border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:24px}.section-head h2{font-size:30px;letter-spacing:-.04em;margin:6px 0 0}.count{font:11px Consolas,monospace;color:var(--muted)}
-    .empty{border:1px dashed #55564f;padding:32px;color:var(--muted);text-align:center}.empty strong{display:block;color:var(--paper);font-size:17px;margin-bottom:5px}.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{min-height:190px;background:var(--panel);border:1px solid var(--line);padding:20px;display:flex;flex-direction:column}.card .type{color:var(--yellow);text-transform:uppercase;letter-spacing:.13em;font-size:10px;font-weight:700}.card h3{font-size:21px;margin:18px 0 6px;letter-spacing:-.03em}.card p{margin:0;color:var(--muted);font-size:14px}.card .tags{margin-top:auto;padding-top:20px;font:11px Consolas,monospace;color:#c4c2b9}
-    .work{margin:5px 0 86px;border:1px solid #55564f;background:#1d1e1b}.tape{background:repeating-linear-gradient(135deg,var(--yellow) 0 18px,#161714 18px 36px);color:#141510;text-align:center;padding:10px 12px;font:800 11px/1.4 Consolas,monospace;letter-spacing:.12em;text-transform:uppercase}.workcopy{padding:24px 28px;display:flex;justify-content:space-between;align-items:center;gap:20px}.workcopy strong{font-size:20px}.workcopy p{color:var(--muted);margin:5px 0 0}.private{white-space:nowrap;color:var(--yellow);font:11px Consolas,monospace;text-transform:uppercase}
-    .footer{border-top:1px solid var(--line);padding:22px 0 34px;display:flex;justify-content:space-between;color:var(--muted);font-size:12px}.footlinks{color:var(--paper)}
-    @media(max-width:700px){.wrap{width:min(100% - 32px,540px)}.top{height:66px}nav{gap:14px;font-size:12px}.hero{padding:70px 0 60px;grid-template-columns:1fr}.mark{display:none}.projects{grid-template-columns:1fr}.section-head{align-items:start;gap:15px;flex-direction:column}.workcopy{align-items:flex-start;flex-direction:column}.footer{gap:12px;flex-direction:column}}
-    /* White professional finish with graphite text and safety-yellow details. */
-    :root{color-scheme:light;--ink:#fff;--paper:#20211e;--muted:#656761;--yellow:#896300;--line:#deded8;--panel:#f7f7f4;--tape:#ffd52a}
-    body{background:#fff;color:var(--paper)}nav{color:#4b4d48}.intro{color:#5f615c}
-    .mark{border-color:#d5d6d0;background:linear-gradient(135deg,transparent 49.5%,#e9e9e4 50%,transparent 50.5%)}.mark span{color:#666861}
-    .empty{border-color:#c5c6c0}.card .tags{color:#53554f}
-    .work{border-color:#d1d2cc;background:#f4f4ef}.tape{background:repeating-linear-gradient(135deg,var(--tape) 0 18px,#f2c523 18px 36px);color:#20211e}
-    .private{color:#765800}
+    :root{color-scheme:light;font-family:"DM Sans","Segoe UI",system-ui,sans-serif;color:#20211e;background:#fff;--ink:#20211e;--paper:#fff;--muted:#666963;--yellow:#8b6707;--tape:#f3cf43;--line:#dedfd9;--surface:#f8f8f5;--mono:"IBM Plex Mono",Consolas,monospace}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:320px;background:var(--paper);color:var(--ink)}
+    a{color:inherit} .wrap{width:min(1180px,100% - 68px);margin:auto}.top{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line)}
+    .brand{font-size:18px;font-weight:700;letter-spacing:-.045em;text-decoration:none}.brand b{color:var(--yellow)}nav{display:flex;gap:24px;color:var(--muted);font:500 11px var(--mono);letter-spacing:.06em;text-transform:uppercase}nav a{text-decoration:none}nav a:hover,.footer a:hover{color:var(--yellow)}
+    .hero{padding:88px 0 80px;display:grid;grid-template-columns:minmax(0,1.12fr) minmax(260px,.88fr);gap:clamp(32px,6vw,72px);align-items:end}
+    .eyebrow,.kicker{font:500 10px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--yellow)}
+    h1{font-size:clamp(46px,6.8vw,82px);line-height:.99;letter-spacing:-.06em;font-weight:700;margin:20px 0;max-width:760px}
+    .intro{max-width:540px;color:#5f615c;font-size:16px;line-height:1.75;margin:0}
+    .mark{position:relative;isolation:isolate;display:flex;min-height:230px;flex-direction:column;justify-content:space-between;overflow:hidden;padding:28px;border:1px solid var(--line);border-radius:3px;background:linear-gradient(145deg,#fff,#fafaf7);box-shadow:0 14px 34px #20211e0b}
+    .mark:before{content:"";position:absolute;right:28px;top:28px;width:42px;height:4px;border-radius:2px;background:var(--tape)}
+    .mark-symbol{font:500 48px/1 var(--mono);letter-spacing:-.12em;color:var(--yellow)}
+    .mark span{font:10px/1.7 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+    .section{padding:20px 0 80px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;border-bottom:1px solid var(--line);padding-bottom:17px;margin-bottom:26px}.section-head h2{font-size:23px;font-weight:600;letter-spacing:-.035em;margin:7px 0 0}.count{font:10px var(--mono);color:var(--muted)}
+    .empty{border:1px dashed #c8c9c2;border-radius:3px;padding:36px;color:var(--muted);text-align:center;background:var(--surface);font-size:13px}.empty strong{display:block;color:var(--ink);font-size:16px;margin-bottom:5px}
+    .work{position:relative;min-height:184px;overflow:hidden;margin:5px 0 80px;padding:26px;border:1px solid #d6d7d1;border-radius:3px;background:repeating-linear-gradient(135deg,#fbfbf8 0,#fbfbf8 18px,#f6f6f2 18px,#f6f6f2 36px)}
+    .tape{position:absolute;top:34px;left:-32px;width:calc(100% + 64px);padding:10px 24px;background:var(--tape);box-shadow:0 4px 14px #20211e16;color:#29281f;text-align:center;font:500 10px var(--mono);letter-spacing:.07em;text-transform:uppercase;transform:rotate(-2.5deg)}
+    .workcopy{padding-top:76px;display:flex;justify-content:space-between;align-items:end;gap:18px}.workcopy strong{font-size:16px;font-weight:600}.workcopy p{margin:6px 0 0;color:var(--muted);font-size:12px}.private{color:#765800;font:10px var(--mono);text-transform:uppercase}
+    .footer{border-top:1px solid var(--line);padding:24px 0 32px;display:flex;justify-content:space-between;gap:16px;color:var(--muted);font:10px var(--mono)}.footer a{text-decoration:none}
+    @media(max-width:760px){.wrap{width:calc(100% - 44px)}.hero{grid-template-columns:1fr;gap:30px;padding:64px 0 58px}.mark{min-height:190px}.workcopy{align-items:flex-start;flex-direction:column;gap:12px}}
+    @media(max-width:510px){.wrap{width:calc(100% - 36px)}.top{min-height:66px}nav{gap:12px;font-size:9px}.hero{padding-top:54px}h1{font-size:clamp(42px,12vw,60px)}.section-head{align-items:flex-start}.empty{padding:26px 18px}.work{padding:20px}.tape{font-size:9px}.footer{flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   </style>
 </head>
 <body>
   <div class="wrap">
     <header class="top"><a class="brand" href="#top">Arryan Rana<b>.</b></a><nav><a href="#projects">Projects</a><a href="#about">About</a></nav></header>
     <main>
-      <section class="hero" id="about"><div><div class="eyebrow">Student Developer · Building in Public</div><h1>Thoughtful code.<br>Built to work.</h1><p class="intro">I build useful software with care, from low-level C programs to thoughtful web experiences.</p></div><div class="mark" aria-hidden="true"><span>CODE / CRAFT / ITERATE</span></div></section>
-      <section class="section" id="projects"><div class="section-head"><div><div class="kicker">Selected work</div><h2>Completed projects</h2></div><span class="count">00 / PUBLIC</span></div><div class="empty"><strong>First project coming soon.</strong>Completed projects will appear here when they’re ready to share.</div></section>
+      <section class="hero" id="about">
+        <div><div class="eyebrow">Student Developer · Building in Public</div><h1>Arryan Rana<br>Thoughtful code. Built to work.</h1><p class="intro">I build useful software with care, from low-level C programs to thoughtful web experiences.</p></div>
+        <aside class="mark" aria-label="Code, craft, iterate"><div class="mark-symbol">{ }</div><span>Code / craft / iterate<br>Personal project log</span></aside>
+      </section>
+      <section class="section" id="projects">
+        <div class="section-head"><div><div class="kicker">Selected work</div><h2>Completed projects</h2></div><span class="count">— / PUBLIC</span></div>
+        <div class="empty"><strong>First project coming soon.</strong>Completed projects will appear here when they’re ready to share.</div>
+      </section>
       <section class="work" aria-label="Work in progress"><div class="tape">Work in progress · details kept under wraps</div><div class="workcopy"><div><strong>Currently on the bench</strong><p>New work is underway. I’ll share it when it’s ready.</p></div><span class="private">Private until complete</span></div></section>
     </main>
-    <footer class="footer"><span>© 2026 Arryan Rana · Built with intent.</span><span class="footlinks">Portfolio preview</span></footer>
+    <footer class="footer"><span>© 2026 Arryan Rana · Built with intent.</span><span>Portfolio preview</span></footer>
   </div>
 </body>
 </html>
+
+
