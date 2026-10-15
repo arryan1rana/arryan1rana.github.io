@@ -320,8 +320,8 @@ h1 {
 @keyframes tape-flow { to { background-position: 152px 0; } }
 @keyframes tape-edge-flow { to { background-position: 32px 0; } }
 @keyframes tape-sway {
-  0%, 100% { transform: rotate(-2.3deg) translateY(0); }
-  50% { transform: rotate(-1.9deg) translateY(-2px); }
+  0%, 100% { transform: rotate(-1deg) translateY(0); }
+  50% { transform: rotate(-.65deg) translateY(-1px); }
 }
 @keyframes mark-line {
   0%, 100% { width: 42px; opacity: .75; }
@@ -357,8 +357,8 @@ h1 {
 
 .work-zone {
   isolation: isolate;
-  height: clamp(360px, 40vw, 500px);
-  min-height: 360px;
+  height: 184px;
+  min-height: 184px;
   padding: 0;
   border-color: #303633;
   background: #18211f;
@@ -370,7 +370,7 @@ h1 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 48%;
+  object-position: center 40%;
 }
 .work-shade {
   position: absolute;
@@ -379,22 +379,22 @@ h1 {
   background: linear-gradient(180deg, #10131120 10%, #10131108 46%, #101311a8 100%);
   pointer-events: none;
 }
-.tape { top: 50%; z-index: 3; }
+.tape { top: 20%; z-index: 3; }
 .tape-secondary {
   z-index: 2;
   animation: tape-flow 16s linear infinite, tape-sway-reverse 8s ease-in-out infinite;
 }
 @keyframes tape-sway-reverse {
-  0%, 100% { transform: rotate(2.3deg) translateY(0); }
-  50% { transform: rotate(1.9deg) translateY(-2px); }
+  0%, 100% { transform: rotate(1deg) translateY(0); }
+  50% { transform: rotate(.65deg) translateY(-1px); }
 }
 .work-copy {
   position: absolute;
   z-index: 4;
-  right: 22px;
-  bottom: 20px;
-  left: 22px;
-  padding: 16px 18px;
+  right: 16px;
+  bottom: 10px;
+  left: 16px;
+  padding: 10px 13px;
   border: 1px solid #ffffff45;
   border-radius: 3px;
   background: #151a17c9;
@@ -404,8 +404,8 @@ h1 {
 .work-copy p { color: #e0e4df; }
 .work-copy .label { color: var(--tape); }
 @media (max-width: 510px) {
-  .work-zone { height: 330px; min-height: 300px; padding: 0; }
-  .work-copy { right: 12px; bottom: 12px; left: 12px; padding: 12px 13px; gap: 8px; }
+  .work-zone { height: 184px; min-height: 184px; padding: 0; }
+  .work-copy { right: 10px; bottom: 8px; left: 10px; padding: 9px 11px; gap: 6px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
