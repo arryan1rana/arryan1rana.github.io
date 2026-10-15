@@ -1,0 +1,9 @@
+ARRYAN RANA PORTFOLIO — START HERE
+
+To view immediately: open preview.html in a browser. This is a visual preview only.
+
+To open the full code in Visual Studio Code: open this extracted folder with File > Open Folder.
+
+To run the full app: use VS Code tasks (Ctrl+Shift+P > Tasks: Run Task) and choose the Portfolio tasks. Node.js is required. Supabase setup is required for project uploads and owner sign-in.
+
+To publish it free on GitHub Pages: follow GITHUB-SETUP.txt. The public GitHub Pages address will be YOUR-GITHUB-USERNAME.github.io. The site and repository must be public on GitHub Free.

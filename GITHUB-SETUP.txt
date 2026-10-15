@@ -1,0 +1,19 @@
+FREE WEBSITE ADDRESS WITH GITHUB PAGES
+
+This project is ready to deploy using the included .github/workflows/deploy.yml file.
+
+1. Sign in to GitHub. Create a NEW public repository named exactly:
+   YOUR-GITHUB-USERNAME.github.io
+   Replace YOUR-GITHUB-USERNAME with your GitHub username.
+2. Do not add a README or other starter files when creating the repository.
+3. Extract this portfolio ZIP on your computer.
+4. In the new GitHub repository, choose Add file > Upload files. Upload the contents of the extracted Arryan-Rana-Portfolio folder, including the .github folder, then commit the upload to the main branch.
+5. Open the repository's Settings > Pages. Under Build and deployment, choose GitHub Actions.
+6. Open the Actions tab and wait for "Deploy portfolio to GitHub Pages" to finish successfully.
+7. Your free website address will be https://YOUR-GITHUB-USERNAME.github.io/
+
+GitHub Pages is free for public repositories, so both the website and source code will be public. Do not upload passwords, service-role keys, or private project details. Unfinished project information belongs only in the secured Supabase database. The public preview uses the generic construction-tape message.
+
+To activate the completed-project gallery and owner admin later, finish the Supabase setup in README.md. Then add VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY under repository Settings > Secrets and variables > Actions. Never add a Supabase service-role key.
+
+The github.io address is a free subdomain. A custom .com or other personal domain is usually a paid annual registration; GitHub Pages can use one if you buy it and configure DNS.

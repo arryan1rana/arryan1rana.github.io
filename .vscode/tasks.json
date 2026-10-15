@@ -1,0 +1,34 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Portfolio: Open quick preview",
+      "type": "process",
+      "command": "${env:WINDIR}\\explorer.exe",
+      "args": ["${workspaceFolder}\\preview.html"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Portfolio: Install dependencies",
+      "type": "shell",
+      "command": "npm",
+      "args": ["install"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Portfolio: Start full website",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "dev", "--", "--open"],
+      "isBackground": true,
+      "problemMatcher": {
+        "pattern": { "regexp": "^(.*)$" },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "VITE v.*",
+          "endsPattern": "Local:.*"
+        }
+      }
+    }
+  ]
+}

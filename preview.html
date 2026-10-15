@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>Arryan Rana — Portfolio Preview</title>
+  <style>
+    :root{color-scheme:dark;--ink:#171816;--paper:#f1efe7;--muted:#a8a69e;--yellow:#f5c928;--line:#343530;--panel:#20211e}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--paper);font:16px/1.55 "Segoe UI",Arial,sans-serif}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 44px));margin:auto}.top{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .brand{font-weight:800;letter-spacing:-.04em;font-size:19px}.brand b{color:var(--yellow)}nav{display:flex;gap:28px;font-size:13px;color:#d2d0c8}nav a:hover,.footer a:hover{color:var(--yellow)}
+    .hero{padding:100px 0 88px;display:grid;grid-template-columns:1fr 190px;gap:50px;align-items:center}.eyebrow,.kicker{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--yellow);font-weight:700}
+    h1{font-size:clamp(44px,8vw,86px);line-height:.98;letter-spacing:-.065em;margin:22px 0}.headline{font-size:clamp(15px,2vw,19px);letter-spacing:.01em;color:#cfcdc4}.intro{max-width:600px;color:var(--muted);font-size:17px;margin-top:22px}
+    .mark{border:1px solid #4a4a42;aspect-ratio:1;display:grid;place-items:center;position:relative;background:linear-gradient(135deg,transparent 49.5%,#34352f 50%,transparent 50.5%)}.mark:before,.mark:after{content:"";position:absolute;background:var(--yellow)}.mark:before{width:10px;height:78px;transform:rotate(45deg)}.mark:after{height:10px;width:78px;transform:rotate(45deg)}.mark span{position:absolute;bottom:12px;right:12px;font:11px Consolas,monospace;color:#aaa}
+    .section{padding:36px 0 74px}.section-head{display:flex;justify-content:space-between;align-items:end;border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:24px}.section-head h2{font-size:30px;letter-spacing:-.04em;margin:6px 0 0}.count{font:11px Consolas,monospace;color:var(--muted)}
+    .empty{border:1px dashed #55564f;padding:32px;color:var(--muted);text-align:center}.empty strong{display:block;color:var(--paper);font-size:17px;margin-bottom:5px}.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{min-height:190px;background:var(--panel);border:1px solid var(--line);padding:20px;display:flex;flex-direction:column}.card .type{color:var(--yellow);text-transform:uppercase;letter-spacing:.13em;font-size:10px;font-weight:700}.card h3{font-size:21px;margin:18px 0 6px;letter-spacing:-.03em}.card p{margin:0;color:var(--muted);font-size:14px}.card .tags{margin-top:auto;padding-top:20px;font:11px Consolas,monospace;color:#c4c2b9}
+    .work{margin:5px 0 86px;border:1px solid #55564f;background:#1d1e1b}.tape{background:repeating-linear-gradient(135deg,var(--yellow) 0 18px,#161714 18px 36px);color:#141510;text-align:center;padding:10px 12px;font:800 11px/1.4 Consolas,monospace;letter-spacing:.12em;text-transform:uppercase}.workcopy{padding:24px 28px;display:flex;justify-content:space-between;align-items:center;gap:20px}.workcopy strong{font-size:20px}.workcopy p{color:var(--muted);margin:5px 0 0}.private{white-space:nowrap;color:var(--yellow);font:11px Consolas,monospace;text-transform:uppercase}
+    .footer{border-top:1px solid var(--line);padding:22px 0 34px;display:flex;justify-content:space-between;color:var(--muted);font-size:12px}.footlinks{color:var(--paper)}
+    @media(max-width:700px){.wrap{width:min(100% - 32px,540px)}.top{height:66px}nav{gap:14px;font-size:12px}.hero{padding:70px 0 60px;grid-template-columns:1fr}.mark{display:none}.projects{grid-template-columns:1fr}.section-head{align-items:start;gap:15px;flex-direction:column}.workcopy{align-items:flex-start;flex-direction:column}.footer{gap:12px;flex-direction:column}}
+    /* White professional finish with graphite text and safety-yellow details. */
+    :root{color-scheme:light;--ink:#fff;--paper:#20211e;--muted:#656761;--yellow:#896300;--line:#deded8;--panel:#f7f7f4;--tape:#ffd52a}
+    body{background:#fff;color:var(--paper)}nav{color:#4b4d48}.intro{color:#5f615c}
+    .mark{border-color:#d5d6d0;background:linear-gradient(135deg,transparent 49.5%,#e9e9e4 50%,transparent 50.5%)}.mark span{color:#666861}
+    .empty{border-color:#c5c6c0}.card .tags{color:#53554f}
+    .work{border-color:#d1d2cc;background:#f4f4ef}.tape{background:repeating-linear-gradient(135deg,var(--tape) 0 18px,#f2c523 18px 36px);color:#20211e}
+    .private{color:#765800}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top"><a class="brand" href="#top">Arryan Rana<b>.</b></a><nav><a href="#projects">Projects</a><a href="#about">About</a></nav></header>
+    <main>
+      <section class="hero" id="about"><div><div class="eyebrow">Student Developer · Building in Public</div><h1>Thoughtful code.<br>Built to work.</h1><p class="intro">I build useful software with care, from low-level C programs to thoughtful web experiences.</p></div><div class="mark" aria-hidden="true"><span>CODE / CRAFT / ITERATE</span></div></section>
+      <section class="section" id="projects"><div class="section-head"><div><div class="kicker">Selected work</div><h2>Completed projects</h2></div><span class="count">00 / PUBLIC</span></div><div class="empty"><strong>First project coming soon.</strong>Completed projects will appear here when they’re ready to share.</div></section>
+      <section class="work" aria-label="Work in progress"><div class="tape">Work in progress · details kept under wraps</div><div class="workcopy"><div><strong>Currently on the bench</strong><p>New work is underway. I’ll share it when it’s ready.</p></div><span class="private">Private until complete</span></div></section>
+    </main>
+    <footer class="footer"><span>© 2026 Arryan Rana · Built with intent.</span><span class="footlinks">Portfolio preview</span></footer>
+  </div>
+</body>
+</html>

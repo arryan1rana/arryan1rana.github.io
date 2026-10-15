@@ -1,0 +1,43 @@
+/* Professional light palette: white canvas, graphite text, construction-yellow accents. */
+:root {
+  color-scheme: light;
+  color: #20211e;
+  background: #fff;
+  --ink: #20211e;
+  --paper: #20211e;
+  --muted: #686a65;
+  --yellow: #896300;
+  --line: #d9dad5;
+  --surface: #f6f6f2;
+  --tape: #ffd52a;
+}
+
+body { background: #fff; color: #20211e; }
+.intro { color: #5f615c; }
+.hero-mark { border-color: var(--line); }
+.card, .panel {
+  background: #fff;
+  border-color: var(--line);
+  box-shadow: 0 5px 18px #20211e08;
+}
+.card p { color: #5f615c; }
+.tag { border-color: var(--line); color: #50524d; }
+.card-link { color: #765800; }
+.empty { border-color: #bfc1bb; color: var(--muted); }
+.work-zone {
+  background: repeating-linear-gradient(135deg, #f7f7f3 0, #f7f7f3 16px, #efefe9 16px, #efefe9 32px);
+  border-color: #d1d2cc;
+}
+.tape { background: var(--tape); color: #20211e; box-shadow: 0 4px 16px #20211e20; }
+.work-copy .label { color: #765800; }
+.form label, .statusline { color: var(--muted); }
+.form input, .form textarea, .form select {
+  background: #fff;
+  color: #20211e;
+  border-color: #c9cac4;
+}
+.form input:focus, .form textarea:focus, .form select:focus { border-color: var(--yellow); }
+.btn.secondary { color: #20211e; border-color: #c9cac4; }
+.notice, .status { color: #765800; }
+.admin-item { border-color: var(--line); }
+.footer { color: var(--muted); }
