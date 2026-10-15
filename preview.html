@@ -42,12 +42,10 @@
     .tape{background-image:linear-gradient(110deg,#f3cf43 0%,#f3cf43 43%,#fae17e 50%,#f3cf43 57%,#edc43a 100%);background-size:200% 100%;animation:tape-flow 14s linear infinite,tape-sway 7s ease-in-out infinite}
     nav a{display:inline-flex;transition:color .2s ease,transform .2s ease}
     nav a:hover{transform:translateY(-1px)}
-    @keyframes tape-sway-reverse{0%,100%{transform:rotate(3.2deg) translateY(0)}50%{transform:rotate(2.8deg) translateY(-1px)}}
     .work{isolation:isolate;height:184px;min-height:184px;padding:0;border-color:#303633;background:#18211f}
     .work-image{position:absolute;z-index:0;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%}
     .work-shade{position:absolute;z-index:1;inset:0;background:linear-gradient(180deg,#10131120 10%,#10131108 46%,#101311a8 100%);pointer-events:none}
     .tape{top:20%;z-index:3}
-    .tape-secondary{z-index:2;animation:tape-flow 16s linear infinite,tape-sway-reverse 8s ease-in-out infinite}
     .workcopy{position:absolute;z-index:4;right:16px;bottom:10px;left:16px;padding:10px 13px;border:1px solid #ffffff45;border-radius:3px;background:#151a17c9;color:#fff;backdrop-filter:blur(8px)}
     .workcopy p{color:#e0e4df}.private{color:var(--tape)}
     @media(max-width:510px){.work{height:184px;min-height:184px;padding:0}.workcopy{right:10px;bottom:8px;left:10px;padding:9px 11px;gap:6px}}
@@ -66,7 +64,7 @@
         <div class="section-head"><div><div class="kicker">Selected work</div><h2>Completed projects</h2></div><span class="count">— / PUBLIC</span></div>
         <div class="empty"><strong>First project coming soon.</strong>Completed projects will appear here when they’re ready to share.</div>
       </section>
-      <section class="work" aria-label="Upcoming project"><img class="work-image" src="./images/actualreality-upcoming.png" alt="A cyan ActualReality project interface in a warm, modern studio." loading="lazy" decoding="async"><div class="work-shade" aria-hidden="true"></div><div class="tape tape-secondary" aria-hidden="true"></div><div class="tape">Work in progress · details kept under wraps</div><div class="workcopy"><div><strong>Currently on the bench</strong><p>New work is underway. I’ll share it when it’s ready.</p></div><span class="private">Private until complete</span></div></section>
+      <section class="work" aria-label="Upcoming project"><img class="work-image" src="./images/actualreality-upcoming.png" alt="A cyan ActualReality project interface in a warm, modern studio." loading="lazy" decoding="async"><div class="work-shade" aria-hidden="true"></div><div class="tape">Work in progress · details kept under wraps</div><div class="workcopy"><div><strong>Currently on the bench</strong><p>New work is underway. I’ll share it when it’s ready.</p></div><span class="private">Private until complete</span></div></section>
     </main>
     <footer class="footer"><span>© 2026 Arryan Rana · Built with intent.</span><span>Portfolio preview</span></footer>
   </div>

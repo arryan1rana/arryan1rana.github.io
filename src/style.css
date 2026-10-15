@@ -384,14 +384,6 @@ h1 {
   pointer-events: none;
 }
 .tape { top: 20%; z-index: 3; }
-.tape-secondary {
-  z-index: 2;
-  animation: tape-flow 16s linear infinite, tape-sway-reverse 8s ease-in-out infinite;
-}
-@keyframes tape-sway-reverse {
-  0%, 100% { transform: rotate(3.2deg) translateY(0); }
-  50% { transform: rotate(2.8deg) translateY(-1px); }
-}
 .work-copy {
   position: absolute;
   z-index: 4;
