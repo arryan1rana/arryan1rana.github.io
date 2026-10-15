@@ -97,7 +97,7 @@ h1 {
   margin: 0;
   overflow: hidden;
   border: 1px solid var(--line);
-  border-radius: 3px;
+  border-radius: 18px;
   background: #151515;
   box-shadow: 0 14px 34px #20211e16;
   opacity: var(--portrait-opacity, 1);
