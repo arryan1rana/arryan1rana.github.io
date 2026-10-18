@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Web Technology Practical Questions and Code</title>
+<style>
+:root{font-family:Arial,Helvetica,sans-serif;color:#183b38;background:#f4f8f7}*{box-sizing:border-box}body{margin:0}.hero{background:#123e3b;color:#fff;padding:38px max(calc((100% - 1000px)/2),24px)}.hero .tag{font-size:11px;letter-spacing:.14em;color:#a9d9cd;font-weight:bold}.hero h1{margin:10px 0;font-size:clamp(28px,4vw,42px)}.hero p{margin:0;color:#d2e5e0}main{max-width:1000px;margin:20px auto;padding:0 18px}.question{padding:23px 0;border-bottom:1px solid #d9e6e2}.question h2{font-size:18px;line-height:1.45;margin:0 0 12px}.question h2 span{color:#168071;font:700 12px monospace;margin-right:10px}pre{margin:0;background:#173b3b;color:#e5f1ee;padding:18px;border-radius:8px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.65 Consolas,"Courier New",monospace}.caption{font-size:10px;letter-spacing:.12em;color:#78908c;font-weight:bold;margin:0 0 8px}.subcaption{font-size:12px;font-weight:bold;color:#315d58;margin:12px 0 6px}.foot{max-width:1000px;margin:auto;padding:14px 18px 30px;color:#6b817d;font-size:11px}@media(max-width:600px){.hero{padding:30px 20px}main{padding:0 16px}pre{font-size:11px}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="tag">WEB TECHNOLOGY · PRACTICAL FILE</div><h1>Questions and Code</h1><p>Eleven exercises with the example code and changed sample data.</p></header><main>
+<section class="question"><h2><span>01</span>How to create an ordered and unordered list ?</h2>
+<p class="caption">CODE</p>
+<pre><code>&lt;html&gt;
+&lt;head&gt;&lt;title&gt;design&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;h1 style="color:darkblue;font-family:arial;font-size:28px;text-align:center"&gt;favourite places&lt;/h1&gt;
+&lt;ol type="A" start="1"&gt;
+  &lt;li&gt;Delhi&lt;/li&gt;&lt;li&gt;Jaipur&lt;/li&gt;&lt;li&gt;Goa&lt;/li&gt;&lt;li&gt;Shimla&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 style="color:blue;font-family:arial"&gt;places to visit&lt;/h1&gt;
+&lt;ul type="square" style="text-align:center;list-style-position:inside"&gt;
+  &lt;li&gt;museum&lt;/li&gt;&lt;li&gt;city park&lt;/li&gt;&lt;li&gt;art gallery&lt;/li&gt;&lt;li&gt;science centre&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</section>
+<section class="question"><h2><span>02</span>How to check a factorial of a number using java with html?</h2>
+<p class="caption">CODE</p>
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+function factorial()
+{
+  let a=Number(document.getElementById("num").value);
+  f=1;
+  for(a;a&gt;1;a--)
+  {
+    f=f*a;
+  }
+  alert(f);
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ENTER THE NUMBER: &lt;input type="text" id="num" name="num" value="6"&gt;&lt;br&gt;
+&lt;input type="button" value="click to check" onclick="factorial()"&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</section>
+<section class="question"><h2><span>03</span>Write a program to check if a number is even or odd using html?</h2>
+<p class="caption">CODE</p>
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+function odd_even()
+{
+  let a=Number(document.getElementById("num").value);
+  if(a%2==0)
+  {
+    alert("even no");
+  }
+  else
+  {
+    alert("odd numb");
+  }
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ENTER THE NUMBER: &lt;input type="text" id="num" name="num" value="7"&gt;&lt;br&gt;
+&lt;input type="button" value="click to check" onclick="odd_even()"&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</section>
+<section class="question"><h2><span>04</span>How to create table and how to give layout?</h2>
+<p class="caption">CODE</p>
+<pre><code>&lt;html&gt;
+&lt;head&gt;&lt;title&gt;student record&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;table border="10" style="margin:auto;width:80%;padding:10px"&gt;
+&lt;caption&gt;&lt;b&gt;Student Record&lt;/b&gt;&lt;/caption&gt;
+&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Course&lt;/th&gt;&lt;th&gt;Marks&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Mira&lt;/td&gt;&lt;td rowspan="2"&gt;BCA&lt;/td&gt;&lt;td align="center"&gt;91&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Arun&lt;/td&gt;&lt;td&gt;88&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Rohan&lt;/td&gt;&lt;td rowspan="3"&gt;BBA&lt;/td&gt;&lt;td rowspan="3"&gt;94&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Neha&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Kabir&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan="2" align="center"&gt;Total Marks&lt;/td&gt;&lt;td&gt;461&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</section>
+<section class="question"><h2><span>05</span>How to design layout for only one web page?</h2>
+<p class="caption">CODE</p>
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+h1{color:darkblue;text-align:center;}
+table{width:80%;border-collapse:collapse;margin:auto;}
+th,td{border:1px solid;text-align:center;padding:5px;}
+th{background-color:lightblue;}
+.green-row{background-color:lightgreen;}
+&lt;/style&gt;
+&lt;title&gt;content&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;student details&lt;/h1&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Course&lt;/th&gt;&lt;th&gt;Year&lt;/th&gt;&lt;th&gt;Marks&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Riya&lt;/td&gt;&lt;td&gt;BCA&lt;/td&gt;&lt;td&gt;1st&lt;/td&gt;&lt;td&gt;91&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Aman&lt;/td&gt;&lt;td&gt;BCA&lt;/td&gt;&lt;td&gt;2nd&lt;/td&gt;&lt;td&gt;86&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Dev&lt;/td&gt;&lt;td&gt;B.Tech&lt;/td&gt;&lt;td&gt;1st&lt;/td&gt;&lt;td&gt;89&lt;/td&gt;&lt;/tr&gt;
+&lt;tr class="green-row"&gt;&lt;td colspan="3"&gt;Average Marks&lt;/td&gt;&lt;td&gt;89&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</section>
+<section class="question"><h2><span>06</span>How to do formatting in web page?</h2>
+<p class="caption">CODE</p>
+<pre><code>&lt;html&gt;
+&lt;head&gt;&lt;title&gt;my introduction&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;&lt;marquee&gt;&lt;b&gt;MY INTRODUCTION&lt;/b&gt;&lt;/marquee&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;b&gt;My name is Riya and I am studying web technology.&lt;/b&gt;&lt;i&gt; I enjoy learning new things and building useful skills. I will keep practising so I can explain my ideas clearly.&lt;/i&gt;&lt;u&gt; My goal is to speak with confidence in front of people.&lt;/u&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</section>
+<section class="question"><h2><span>07</span>How to design layout for only single line which is called inline css?</h2>
+<p class="caption">CODE</p>
+<pre><code>&lt;html&gt;
+&lt;head&gt;&lt;title&gt;inline css&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;h1 style="font-family:arial;color:blue;font-size:32px;text-align:center"&gt;MY INTRODUCTION&lt;/h1&gt;
+&lt;p style="font-family:arial;color:red;font-size:28px"&gt;My name is Riya and I am learning HTML and CSS. I am practising web design and will keep improving my skills.&lt;/p&gt;
+&lt;h2 style="font-family:arial;color:darkblue;font-size:32px"&gt;MY EDUCATION&lt;/h2&gt;
+&lt;p style="font-family:arial;color:blue"&gt;I am studying web technology and learning how to create web pages.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</section>
+<section class="question"><h2><span>08</span>How to insert image in a table?</h2>
+<p class="caption">CODE</p>
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+h1{color:darkblue;text-align:center;}
+table{width:80%;border-collapse:collapse;margin:auto;}
+th,td{border:1px solid;text-align:center;padding:5px;}
+th{background-color:lightblue;}
+.green-row{background-color:lightgreen;}
+&lt;/style&gt;
+&lt;title&gt;content&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;STUDENT DETAILS&lt;/h1&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Course&lt;/th&gt;&lt;th&gt;Year&lt;/th&gt;&lt;th&gt;Marks&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Riya&lt;/td&gt;&lt;td&gt;BCA &lt;img src="flower.svg" height="75" width="75" alt="Flower"&gt;&lt;/td&gt;&lt;td&gt;1st&lt;/td&gt;&lt;td&gt;91&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Aman&lt;/td&gt;&lt;td&gt;BCA &lt;img src="flower.svg" height="75" width="75" alt="Flower"&gt;&lt;/td&gt;&lt;td&gt;2nd&lt;/td&gt;&lt;td&gt;86&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Dev&lt;/td&gt;&lt;td&gt;B.Tech &lt;img src="flower.svg" height="75" width="75" alt="Flower"&gt;&lt;/td&gt;&lt;td&gt;1st&lt;/td&gt;&lt;td&gt;89&lt;/td&gt;&lt;/tr&gt;
+&lt;tr class="green-row"&gt;&lt;td colspan="3"&gt;Average Marks&lt;/td&gt;&lt;td&gt;89&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</section>
+<section class="question"><h2><span>09</span>How to create a hyperlink on image and text?</h2>
+<div class="subcaption">With image code</div><p class="caption">CODE</p>
+<pre><code>&lt;html&gt;
+&lt;head&gt;&lt;title&gt;hyperlink&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;&lt;b&gt;Creating Hyperlink On Image&lt;/b&gt;&lt;/h1&gt;
+&lt;a href="https://en.wikipedia.org/wiki/Bachelor_of_Technology" target="_blank"&gt;&lt;img src="flower.svg" alt="Open Wikipedia"&gt;&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<div class="subcaption">With text code</div><p class="caption">CODE</p>
+<pre><code>&lt;html&gt;
+&lt;head&gt;&lt;title&gt;hyperlink&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;&lt;b&gt;Creating Hyperlink On Text&lt;/b&gt;&lt;/h1&gt;
+&lt;a href="https://en.wikipedia.org/wiki/Bachelor_of_Technology" target="_blank"&gt;&lt;p style="font-size:32px;color:blue"&gt;Wikipedia&lt;/p&gt;&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></section>
+<section class="question"><h2><span>10</span>How to design layout for multiple web pages (external css)?</h2>
+<div class="subcaption">Color.css file</div>
+<p class="caption">CODE</p>
+<pre><code>&lt;!-- color.css file --&gt;
+h1{color:darkblue;text-align:center;}
+th{padding:10px;spacing:10px;border:1px solid;background-color:lightblue;}
+td{padding:5px;border:1px solid;background-color:lightyellow;text-align:center;}
+table{width:80%;margin:auto;border-collapse:collapse;}
+
+</code></pre><div class="subcaption">External HTML file</div><p class="caption">CODE</p><pre><code>
+&lt;html&gt;
+&lt;head&gt;
+&lt;link rel="stylesheet" href="color.css"&gt;
+&lt;title&gt;design&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;STUDENT DETAILS&lt;/h1&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Course&lt;/th&gt;&lt;th&gt;Year&lt;/th&gt;&lt;th&gt;Marks&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Riya&lt;/td&gt;&lt;td&gt;BCA&lt;/td&gt;&lt;td&gt;1st&lt;/td&gt;&lt;td&gt;91&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Aman&lt;/td&gt;&lt;td&gt;BBA&lt;/td&gt;&lt;td&gt;2nd&lt;/td&gt;&lt;td&gt;86&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Dev&lt;/td&gt;&lt;td&gt;B.Tech&lt;/td&gt;&lt;td&gt;1st&lt;/td&gt;&lt;td&gt;89&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan="3"&gt;AVERAGE MARKS&lt;/td&gt;&lt;td&gt;89&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</section>
+<section class="question"><h2><span>11</span>How to check whether person is eligible to vote or not using java script by using html?</h2>
+<p class="caption">CODE</p>
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+function verify()
+{
+  let a=Number(document.getElementById("age").value);
+  if(a&gt;=18)
+  {
+    alert("eligible to vote");
+  }
+  else
+  {
+    alert("ineligible to vote");
+  }
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ENTER YOUR AGE: &lt;input type="text" id="age" name="age" value="21"&gt;
+&lt;input type="button" value="click to check" onclick="verify()"&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</section>
+</main><footer class="foot">Web Technology Practical Project · HTML, CSS and JavaScript</footer></body></html>
+
